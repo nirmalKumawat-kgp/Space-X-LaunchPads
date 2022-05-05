@@ -1,0 +1,9 @@
+.launchHeading {
+  display: flex;
+  align-items: center;
+}
+.youtubePlayer {
+  display: inline;
+  width: 100%;
+  min-height: 70vh;
+}

@@ -1,0 +1,38 @@
+.launchPadContainer {
+  display: flex;
+  transition: height 0.2s ease-in-out;
+}
+.launchPadPaper {
+  transition: height 0.2s ease-in-out;
+}
+.launchPadHeading {
+  display: flex;
+  align-items: center;
+}
+div.launchPadDetails {
+  padding: 1rem;
+  position: relative;
+  z-index: 10;
+  transition: height 0.2s;
+}
+div.launchPadDetails:hover p.launchPadDescription {
+  display: none;
+}
+div.launchPadDetails:hover p.launchPadComplete {
+  opacity: 1;
+  height: auto;
+}
+p.launchPadDescription {
+  transition: all 0.2s;
+}
+p.launchPadComplete {
+  z-index: 10;
+  transition: opacity 1s linear;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+}
+.lauchesList {
+  background-color: #eee;
+  border-radius: 0.5rem;
+}
