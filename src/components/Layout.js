@@ -5,7 +5,7 @@ export default function Layout({ children, heading }) {
   return (
     <Container>
       <header>
-        <AppBar position="fixed">
+        <AppBar position="fixed" style={{ backgroundColor: "rgba(0,0,0,0.9)" }}>
           <Container>
             <Toolbar disableGutters style={{ position: "relaitve" }}>
               <a
@@ -24,7 +24,7 @@ export default function Layout({ children, heading }) {
               <Typography
                 variant="h5"
                 component="h1"
-                style={{ margin: "auto" }}
+                style={{ margin: "auto", fontFamily: "Poppins" }}
               >
                 {heading}
               </Typography>

@@ -18,6 +18,18 @@ export default function LaunchPad({ launchPad }) {
   const handleLaunchClick = (launchId) => {
     navigate(`/launch/${launchId}`);
   };
+  const getChipColor = () => {
+    switch (launchPad.status) {
+      case "retired":
+        return "error";
+      case "active":
+        return "success";
+      default:
+        return "primary";
+    }
+  };
+  const color = getChipColor();
+
   return (
     <Grid item xs={12} sm={6} md={4} className={Styles.launchPadContainer}>
       <Paper sx={{ p: 2 }} elevation={3} className={Styles.launchPadPaper}>
@@ -25,8 +37,8 @@ export default function LaunchPad({ launchPad }) {
           {launchPad.name}
           <Chip
             label={launchPad.status}
-            color={launchPad.status === "active" ? "success" : "primary"}
-            variant="filled "
+            color={color}
+            variant="filled"
             sx={{ marginLeft: "1rem" }}
           />
         </Typography>
@@ -54,7 +66,10 @@ export default function LaunchPad({ launchPad }) {
                     key={index}
                     onClick={() => handleLaunchClick(launch)}
                   >
-                    <ListItemText primary={launch.toString()} />
+                    <ListItemText
+                      primary={launch.toString()}
+                      sx={{ fontFamily: "Lato" }}
+                    />
                   </ListItem>
                   {index === 2 ? "" : <Divider />}
                 </>
@@ -64,7 +79,7 @@ export default function LaunchPad({ launchPad }) {
             <Typography
               variant="body1"
               color="error"
-              sx={{ textAlign: "center" }}
+              sx={{ textAlign: "center", fontFamily: "Lato" }}
             >
               {" "}
               No Launch Available

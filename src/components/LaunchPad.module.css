@@ -5,10 +5,16 @@
 .launchPadPaper {
   transition: height 0.2s ease-in-out;
 }
-.launchPadHeading {
+h5.launchPadHeading {
   display: flex;
   align-items: center;
+  font-family: "Poppins";
+  font-weight: 500;
 }
+h5.launchPadHeading span {
+  font-weight: 400;
+}
+
 div.launchPadDetails {
   padding: 1rem;
   position: relative;
@@ -24,8 +30,10 @@ div.launchPadDetails:hover p.launchPadComplete {
 }
 p.launchPadDescription {
   transition: all 0.2s;
+  font-family: "Lato";
 }
 p.launchPadComplete {
+  font-family: "Lato";
   z-index: 10;
   transition: opacity 1s linear;
   opacity: 0;
@@ -33,6 +41,7 @@ p.launchPadComplete {
   overflow: hidden;
 }
 .lauchesList {
+  font-family: "Lato";
   background-color: #eee;
   border-radius: 0.5rem;
 }
